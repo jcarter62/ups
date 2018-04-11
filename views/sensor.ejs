@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-</head>
+<% include ./partials/head.ejs %>
 <body>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
-<p>Connection Status: <%= status %></p>
+<% include partials/menu.ejs %>
+<div id="main">
+
+    <h1><%= title %></h1>
+    <hr>
+
+
+    <hr>
+    <button type="button" onclick="addBtn()">Add</button>
+
+</div>
+<% include  ./partials/footer.ejs %>
 </body>
+<script>
+    function addBtn() {
+      window.location.assign('/sensor/add');
+    }
+
+</script>
 </html>

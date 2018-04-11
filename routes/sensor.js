@@ -24,6 +24,11 @@ router.get('/add', function(req, res, next) {
     res.render('sensoradd',data);
 });
 
+router.post('/add', function(req, res, next) {
+    let data = req.body;
+    res.send(JSON.stringify(data));
+});
+
 router.get('/delete/:id', function(req, res, next) {
   let id = req.params.id;
   let data = { title: 'Sensor Delete', id: id};
