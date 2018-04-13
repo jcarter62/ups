@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/menu.ejs %>
+<div id="main">
+
+    <p>Add Sensor</p>
+    <hr>
+    <form id="frmsensoradd" action="/sensor/add" method="post" >
+        <label>Name:</label><input type="text" name="itm_name" placeholder="Name"><br>
+        <label>IP:</label><input type="text" name=itm_ip" placeholder="IP Address"><br>
+        <label>Tempurature OID</label><input type="text" name="itm_temp" placeholder="Tempurature"><br>
+        <label>Warning: </label><input type="text" name="itm_warning" placeholder="warning"><br>
+        <label>Alarm:</label><input type="text" name="itm_alarm" placeholder="alarm"><br>
+        <input type="submit" value="OK">
+    </form>
+
+</div>
+<% include  ../partials/footer.ejs %>
+</body>
+<script>
+  function addBtn() {
+    window.location.assign('/sensor/add');
+  }
+
+</script>
+</html>

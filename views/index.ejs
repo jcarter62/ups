@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<% include ./partials/head.ejs %>
+<body>
+<% include partials/menu.ejs %>
+<div id="main">
+  Welcome
+
+
+</div>
+<% include  ./partials/footer.ejs %>
+</body>
+<script>
+  function addBtn() {
+    window.location.assign('/sensor/add');
+  }
+
+</script>
 </html>
